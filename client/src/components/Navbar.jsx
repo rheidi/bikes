@@ -11,6 +11,9 @@ function Navbar() {
                 <li>
                     <Link to="/stations">Stations</Link>
                 </li>
+                <li>
+                    <Link to="/journeys">Journeys</Link>
+                </li>
             </ul>
         </nav>
     )

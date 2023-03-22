@@ -4,6 +4,7 @@ import Layout from "./pages/Layout"
 import Home from "./pages/Home"
 import Stations from "./pages/Stations"
 import Station from "./pages/Station"
+import Journeys from "./pages/Journeys"
 import NoPage from "./pages/NoPage"
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="stations" element={<Stations />} />
           <Route path="stations/:id" element={<Station />} />
+          <Route path="journeys" element={<Journeys />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

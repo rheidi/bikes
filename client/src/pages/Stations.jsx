@@ -5,13 +5,9 @@ function Stations() {
     const [data, setData] = useState([{}])
 
     useEffect(() => {
-    fetch("/stations").then(
-        res => res.json()
-    ).then(
-        data => {
-            setData(data)
-        }
-    )
+    fetch("/stations")
+    .then(res => res.json())
+    .then(data => setData(data))
     }, [])
     return (
         <div>

@@ -6,25 +6,20 @@ function Station() {
     const [data, setData] = useState([{}])
 
     useEffect(() => {
-    fetch("/station_info/"+id).then(
-        res => res.json()
-    ).then(
-        data => {
-            setData(data)
-            console.log(data)
-        }
-    )
+    fetch("/station_info/"+id)
+    .then(res => res.json())
+    .then(data => setData(data))
     }, [])
     return (
         <div>
-            {(typeof data.station_info === 'undefined') ? (
+            {(typeof data === 'undefined') ? (
                 <p>Loading...</p>
                 ) : (
                     <>
                         <b>Station name:</b>
-                        <p>{data.station_info.nimi}</p>
+                        <p>{data.nimi}</p>
                         <b>Station address:</b>
-                        <p>{data.station_info.osoite}</p>
+                        <p>{data.osoite}</p>
                     </>
                 )
             }
